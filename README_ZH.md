@@ -7,10 +7,10 @@ mvn clean install -Dmaven.test.skip=true
 # or
 mvn clean package -Dmaven.test.skip=true
 
-# clean compilation:
+# Clean compilation:
 mvn clean 
 ```
-##Run
+## Run
 ```bash
 # 基础运行命令
 java -jar ${JAVA_OPTS} ${JAR_NAME}
