@@ -2,15 +2,17 @@ package com.zhtty.mock.box.service.impl;
 
 import com.zhtty.mock.box.exception.BizException;
 import com.zhtty.mock.box.exception.ExceptionMessageEnum;
-import com.zhtty.mock.box.model.UserDO;
+import com.zhtty.mock.box.dao.model.UserDO;
 import com.zhtty.mock.box.repository.UserRepository;
 import com.zhtty.mock.box.service.ShiroAuthService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
+@Service
 public class ShiroAuthServiceImpl implements ShiroAuthService {
-    @Resource
+    @Autowired
     private UserRepository userRepository;
 
     @Override

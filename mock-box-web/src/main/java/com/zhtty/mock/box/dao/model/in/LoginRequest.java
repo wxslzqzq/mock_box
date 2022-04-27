@@ -1,2 +1,16 @@
-package com.zhtty.mock.box.dao.model.in;public class LoginRequest {
+package com.zhtty.mock.box.dao.model.in;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class LoginRequest {
+    private String username;
+    private String password;
+
 }

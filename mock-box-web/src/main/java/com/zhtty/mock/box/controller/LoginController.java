@@ -1,24 +1,24 @@
 package com.zhtty.mock.box.controller;
 
+import com.zhtty.mock.box.dao.model.in.LoginRequest;
+import com.zhtty.mock.box.dao.model.out.LoginResponse;
 import com.zhtty.mock.box.service.LoginService;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 
 @Slf4j
 @RestController
 @RequestMapping("/api")
 public class LoginController {
-    @Resource
+    @Autowired
     private LoginService loginService;
 
     @PostMapping("/login")
-    public boolean selectApplication(String userNo, String password) {
-        loginService.loginByToken(userNo, password);
-        return true;
+    @ApiOperation(value = "登录", notes = "")
+    public LoginResponse loginByPwd(@RequestBody LoginRequest in) {
+        return loginService.loginByPwd(in.getUsername(), in.getPassword());
     }
 }

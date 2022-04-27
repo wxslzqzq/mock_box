@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
-@SpringBootApplication(scanBasePackages = {"com.alibaba.chaosblade.box"})
+@SpringBootApplication(scanBasePackages = {"com.zhtty.mock.box"})
 @PropertySource(value = {"application.properties"})
 public class Application {
 

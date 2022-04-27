@@ -4,9 +4,9 @@ package com.zhtty.mock.box.advice;
 
 import com.github.pagehelper.Page;
 import com.zhtty.mock.box.context.OriginContext;
-import com.zhtty.mock.box.model.PageResponse;
-import com.zhtty.mock.box.model.Response;
-import com.zhtty.mock.box.model.WebConstants;
+import com.zhtty.mock.box.dao.model.PageResponse;
+import com.zhtty.mock.box.dao.model.Response;
+import com.zhtty.mock.box.dao.model.WebConstants;
 import com.zhtty.mock.box.page.PageUtils;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.Order;

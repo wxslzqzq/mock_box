@@ -2,7 +2,7 @@ package com.zhtty.mock.box.shiro;
 
 import com.zhtty.mock.box.exception.BizException;
 import com.zhtty.mock.box.exception.ExceptionMessageEnum;
-import com.zhtty.mock.box.model.UserDO;
+import com.zhtty.mock.box.dao.model.UserDO;
 import com.zhtty.mock.box.service.ShiroAuthService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.*;
@@ -38,7 +38,6 @@ public class JWTRealm extends AuthorizingRealm {
      * 使用JWT替代原生Token
      *
      * @param token
-     * @return
      */
     @Override
     public boolean supports(AuthenticationToken token) {

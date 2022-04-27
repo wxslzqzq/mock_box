@@ -1,8 +1,10 @@
 package com.zhtty.mock.box.shiro;
 
+import com.zhtty.mock.box.constants.MockBoxConst;
 import com.zhtty.mock.box.exception.BizException;
 import com.zhtty.mock.box.exception.ExceptionMessageEnum;
-import com.zhtty.mock.box.shiro.JWTToken;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,8 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class JWTFilter extends BasicHttpAuthenticationFilter {
 
-    // 登录标识
-    private static String LOGIN_SIGN = "Authorization";
 
     /**
      * 检测用户是否登录
@@ -29,7 +29,7 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
     protected boolean isLoginAttempt(ServletRequest request, ServletResponse response) {
         HttpServletRequest req = (HttpServletRequest) request;
 
-        String authorization = req.getHeader(LOGIN_SIGN);
+        String authorization = req.getHeader(MockBoxConst.LOGIN_SIGN);
 
         return authorization != null;
 
@@ -38,12 +38,16 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
     @Override
     protected boolean executeLogin(ServletRequest request, ServletResponse response) throws Exception {
         HttpServletRequest req = (HttpServletRequest) request;
-        String header = req.getHeader(LOGIN_SIGN);
+        String header = req.getHeader(MockBoxConst.LOGIN_SIGN);
 
         JWTToken token = new JWTToken(header);
 
-        getSubject(request, response).login(token);
-
+        Subject subject = SecurityUtils.getSubject();
+        try {
+            subject.login(token);
+        } catch (Exception e) {
+            throw new BizException(ExceptionMessageEnum.AUTHENTICATION_FAIL);
+        }
         return true;
     }
 

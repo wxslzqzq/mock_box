@@ -3,16 +3,16 @@ package com.zhtty.mock.box.repository;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.zhtty.mock.box.QueryWrapperBuilder;
-import com.zhtty.mock.box.mapper.UserMapper;
-import com.zhtty.mock.box.model.UserDO;
+import com.zhtty.mock.box.dao.mapper.UserMapper;
+import com.zhtty.mock.box.dao.model.UserDO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.annotation.Resource;
 import java.util.Optional;
 
 @Repository
 public class UserRepository implements IRepository<Long, UserDO> {
-    @Resource
+    @Autowired
     private UserMapper userMapper;
 
     @Override

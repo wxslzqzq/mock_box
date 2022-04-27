@@ -1,4 +1,4 @@
-package com.zhtty.mock.box.model;
+package com.zhtty.mock.box.dao.model;
 
 /*
  * Copyright 1999-2021 Alibaba Group Holding Ltd.

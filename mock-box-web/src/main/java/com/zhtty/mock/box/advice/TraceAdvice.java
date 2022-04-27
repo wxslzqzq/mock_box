@@ -6,7 +6,7 @@ import cn.hutool.core.util.ReflectUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.zhtty.mock.box.context.OriginContext;
-import com.zhtty.mock.box.model.WebConstants;
+import com.zhtty.mock.box.dao.model.WebConstants;
 import com.zhtty.mock.box.utils.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
@@ -41,7 +41,7 @@ public class TraceAdvice implements ResponseBodyAdvice<Object>, RequestBodyAdvic
     }
 
     @Override
-    public HttpInputMessage beforeBodyRead(HttpInputMessage inputMessage, MethodParameter parameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) throws IOException {
+    public HttpInputMessage beforeBodyRead(HttpInputMessage inputMessage, MethodParameter parameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) {
         return inputMessage;
     }
 

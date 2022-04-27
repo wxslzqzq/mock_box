@@ -1,5 +1,7 @@
 package com.zhtty.mock.box.service;
 
+import com.zhtty.mock.box.dao.model.out.LoginResponse;
+
 public interface LoginService {
-    void loginByToken(String userNo, String password);
+    LoginResponse loginByPwd(String userNo, String password);
 }

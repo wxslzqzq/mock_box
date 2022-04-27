@@ -24,7 +24,6 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- *
  * @author A8142
  */
 @Configuration
@@ -37,15 +36,15 @@ public class WebAppConfigurer implements WebMvcConfigurer {
                 .addPathPatterns("/api/**")
                 .excludePathPatterns("/favicon.ico")
                 .excludePathPatterns("/*.html")
-                .excludePathPatterns("/webjars/**");
+                .excludePathPatterns("/swagger-resources/**", "/webjars/**", "/v2/**", "/swagger-ui.html/**");
 
     }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
-//        registry.addResourceHandler("/swagger-ui.html")
-//                .addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/swagger-ui.html")
+                .addResourceLocations("classpath:/META-INF/resources/");
 
         registry.addResourceHandler("/*/**")
                 .addResourceLocations("classpath:/web/build/");

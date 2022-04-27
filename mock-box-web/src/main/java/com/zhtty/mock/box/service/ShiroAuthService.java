@@ -1,6 +1,6 @@
 package com.zhtty.mock.box.service;
 
-import com.zhtty.mock.box.model.UserDO;
+import com.zhtty.mock.box.dao.model.UserDO;
 
 import java.util.List;
 

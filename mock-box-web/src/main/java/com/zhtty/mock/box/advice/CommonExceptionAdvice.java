@@ -5,8 +5,8 @@ package com.zhtty.mock.box.advice;
 import cn.hutool.core.util.StrUtil;
 
 import com.zhtty.mock.box.exception.BizException;
-import com.zhtty.mock.box.model.Response;
-import com.zhtty.mock.box.model.WebConstants;
+import com.zhtty.mock.box.dao.model.Response;
+import com.zhtty.mock.box.dao.model.WebConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
