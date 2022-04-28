@@ -1,7 +1,7 @@
 package com.zhtty.mock.box.dao.mapper;
 
-import com.zhtty.mock.box.dao.model.RoleDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.zhtty.mock.box.model.RoleDO;
 import org.springframework.stereotype.Repository;
 /**
  * Mapper接口

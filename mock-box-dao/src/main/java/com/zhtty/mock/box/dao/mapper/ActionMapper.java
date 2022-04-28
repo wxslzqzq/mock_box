@@ -1,6 +1,6 @@
 package com.zhtty.mock.box.dao.mapper;
 
-import com.zhtty.mock.box.dao.model.ActionDO;
+import com.zhtty.mock.box.model.ActionDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
 /**

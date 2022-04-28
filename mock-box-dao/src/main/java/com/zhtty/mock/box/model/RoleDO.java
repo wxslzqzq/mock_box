@@ -29,7 +29,7 @@ public class RoleDO extends BaseDO {
      */
     private String roleName;
     /**
-     * 别名
+     * 中文别名
      */
     private String alias;
     /**
