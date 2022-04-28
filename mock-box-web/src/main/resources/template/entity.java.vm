@@ -1,0 +1,32 @@
+package ${package.Entity};
+
+
+#if(${table.hasDate})
+import java.util.Date;
+#end
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.*;
+import com.zhtty.mock.box.model.BaseDO;
+
+/**
+ * ${table.comment}
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@TableName("${table.name}")
+@EqualsAndHashCode(callSuper = true)
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class ${entity} extends BaseDO {
+
+
+    #foreach($field in ${table.fields})
+    /**
+     * ${field.comment}
+     */
+    private ${field.propertyType} ${field.propertyName};
+    #end
+}
