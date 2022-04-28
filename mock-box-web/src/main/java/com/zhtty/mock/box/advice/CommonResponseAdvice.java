@@ -4,9 +4,9 @@ package com.zhtty.mock.box.advice;
 
 import com.github.pagehelper.Page;
 import com.zhtty.mock.box.context.OriginContext;
-import com.zhtty.mock.box.dao.model.PageResponse;
-import com.zhtty.mock.box.dao.model.Response;
-import com.zhtty.mock.box.dao.model.WebConstants;
+import com.zhtty.mock.box.model.PageResponse;
+import com.zhtty.mock.box.model.Response;
+import com.zhtty.mock.box.model.WebConstants;
 import com.zhtty.mock.box.page.PageUtils;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.Order;
@@ -36,10 +36,10 @@ public class CommonResponseAdvice implements ResponseBodyAdvice<Object> {
     public Response<Object> beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> selectedConverterType,
                                             ServerHttpRequest httpRequest, ServerHttpResponse httpResponse) {
 
-        Page<Object> page = PageUtils.getPage();
+        Page page = PageUtils.getPage();
         Response<Object> response;
         if (page != null) {
-            PageResponse<Object> pageResponse = new PageResponse();
+            PageResponse pageResponse = new PageResponse();
             pageResponse.setData(body);
             pageResponse.setPage(page.getPageNum());
             pageResponse.setPageSize(page.getPageSize());

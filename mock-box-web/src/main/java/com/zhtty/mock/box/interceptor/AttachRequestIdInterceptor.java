@@ -18,7 +18,7 @@ package com.zhtty.mock.box.interceptor;
 
 
 import cn.hutool.core.util.IdUtil;
-import com.zhtty.mock.box.dao.model.WebConstants;
+import com.zhtty.mock.box.model.WebConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.web.context.request.RequestAttributes;

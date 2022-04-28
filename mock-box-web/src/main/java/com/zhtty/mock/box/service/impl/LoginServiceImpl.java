@@ -1,10 +1,10 @@
 package com.zhtty.mock.box.service.impl;
 
 import cn.hutool.core.util.StrUtil;
-import com.zhtty.mock.box.dao.model.out.LoginResponse;
+import com.zhtty.mock.box.model.out.LoginResponse;
 import com.zhtty.mock.box.exception.BizException;
 import com.zhtty.mock.box.exception.ExceptionMessageEnum;
-import com.zhtty.mock.box.dao.model.UserDO;
+import com.zhtty.mock.box.model.UserDO;
 import com.zhtty.mock.box.repository.UserRepository;
 import com.zhtty.mock.box.service.LoginService;
 import com.zhtty.mock.box.shiro.JWTToken;

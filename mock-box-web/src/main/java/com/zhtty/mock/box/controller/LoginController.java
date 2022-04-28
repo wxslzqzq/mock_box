@@ -1,7 +1,7 @@
 package com.zhtty.mock.box.controller;
 
-import com.zhtty.mock.box.dao.model.in.LoginRequest;
-import com.zhtty.mock.box.dao.model.out.LoginResponse;
+import com.zhtty.mock.box.model.in.LoginRequest;
+import com.zhtty.mock.box.model.out.LoginResponse;
 import com.zhtty.mock.box.service.LoginService;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

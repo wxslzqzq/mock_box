@@ -1,4 +1,4 @@
-package com.zhtty.mock.box.dao.model;
+package com.zhtty.mock.box.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;

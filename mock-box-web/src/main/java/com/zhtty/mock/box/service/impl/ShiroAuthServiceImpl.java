@@ -2,7 +2,7 @@ package com.zhtty.mock.box.service.impl;
 
 import com.zhtty.mock.box.exception.BizException;
 import com.zhtty.mock.box.exception.ExceptionMessageEnum;
-import com.zhtty.mock.box.dao.model.UserDO;
+import com.zhtty.mock.box.model.UserDO;
 import com.zhtty.mock.box.repository.UserRepository;
 import com.zhtty.mock.box.service.ShiroAuthService;
 import org.springframework.beans.factory.annotation.Autowired;

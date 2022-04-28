@@ -1,4 +1,4 @@
-package com.zhtty.mock.box.dao.model.out;
+package com.zhtty.mock.box.model.in;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,12 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class LoginResponse {
-    private String userNo;
+public class LoginRequest {
     private String username;
-    private String token;
-    private boolean flag;
+    private String password;
+
 }
