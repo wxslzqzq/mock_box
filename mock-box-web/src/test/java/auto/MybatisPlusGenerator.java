@@ -74,7 +74,7 @@ public class MybatisPlusGenerator {
         packageInfo.remove(ConstVal.CONTROLLER);
         packageInfo.remove(ConstVal.MODULE_NAME);
         packageInfo.remove(ConstVal.XML);
-        packageInfo.put(ConstVal.ENTITY_PATH, mainProjectPath + daoProjectPath + "/src/main/java/com/zhtty/mock/box/dao/model");
+        packageInfo.put(ConstVal.ENTITY_PATH, mainProjectPath + daoProjectPath + "/src/main/java/com/zhtty/mock/box/model");
         packageInfo.put(ConstVal.XML_PATH, mainProjectPath + daoProjectPath + "/src/main/resources/mapper");
         packageInfo.put(ConstVal.MAPPER_PATH, mainProjectPath + daoProjectPath + "/src/main/java/com/zhtty/mock/box/dao/mapper");
         packageInfo.put(ConstVal.SERVICE_PATH, mainProjectPath + serviceProjectPath + "/src/main/java/com/zhtty/mock/box/service");
@@ -87,7 +87,7 @@ public class MybatisPlusGenerator {
                 .setService("service")
                 .setServiceImpl("service.impl")
                 .setPathInfo(packageInfo)
-                .setEntity("dao.model");
+                .setEntity("model");
         autoGenerator.setPackageInfo(packageConfig);
         autoGenerator.setStrategy(strategyConfig);
         //模板
