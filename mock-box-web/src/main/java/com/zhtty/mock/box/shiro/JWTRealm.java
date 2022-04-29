@@ -2,6 +2,7 @@ package com.zhtty.mock.box.shiro;
 
 import com.zhtty.mock.box.exception.BizException;
 import com.zhtty.mock.box.exception.ExceptionMessageEnum;
+import com.zhtty.mock.box.model.ActionDO;
 import com.zhtty.mock.box.model.UserDO;
 import com.zhtty.mock.box.service.ShiroAuthService;
 import lombok.extern.slf4j.Slf4j;
@@ -13,6 +14,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Set;
 
 @Slf4j
 public class JWTRealm extends AuthorizingRealm {
@@ -27,10 +29,9 @@ public class JWTRealm extends AuthorizingRealm {
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         String userNo = JWTUtil.getUserNo(principals.toString());
         UserDO userDO = shiroAuthService.getPrincipal(userNo);
-        List<String> userPermissions = shiroAuthService.getPermissions(userDO.getId());
+        Set<String> actionSet = shiroAuthService.getPermissions(userDO.getRoleIdList());
 //        // 基于Permission的权限信息
-//        info.addStringPermissions(userPermissions);
-
+        info.addStringPermissions(actionSet);
         return info;
     }
 

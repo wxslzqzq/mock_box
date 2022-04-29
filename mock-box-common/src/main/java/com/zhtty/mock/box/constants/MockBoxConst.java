@@ -5,6 +5,6 @@ public class MockBoxConst {
 
     public final static String DOT = ".";
     public final static String COLON = ":";
-    public static final String DEFAULT = "default";
-    public static String LOGIN_SIGN = "Authorization";
+    public final static String DEFAULT = "default";
+    public final static String LOGIN_SIGN = "Authorization";
 }

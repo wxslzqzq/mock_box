@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Data
 public class Response<T> implements Serializable {
 
-    private static final Integer SUCCESS_CODE = 2000;
+    private static final Integer SUCCESS_CODE = 20000;
 
     private static final Integer SYSTEM_ERROR_CODE = 6000;
 

@@ -1,6 +1,6 @@
 package com.zhtty.mock.box.dao.mapper;
 
-import com.zhtty.mock.box.dao.model.PermissionGroupDO;
+import com.zhtty.mock.box.model.PermissionGroupDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
 /**

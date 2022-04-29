@@ -25,7 +25,7 @@ public class PermissionGroupDO extends BaseDO {
      */
     private String permissionGroupName;
     /**
-     * 
+     * 中文别名
      */
     private String alias;
     /**
