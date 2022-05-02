@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.*;
  * 控制器层
  *
  * @author AutoGenerator
- * @since 2022-04-28
+ * @since 2022-05-02
  */
 @RestController
 @RequestMapping("/api")
-public class ActionController  {
+public class RouteController  {
 
 }

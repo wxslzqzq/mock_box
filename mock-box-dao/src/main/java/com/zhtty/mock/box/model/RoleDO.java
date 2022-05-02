@@ -21,10 +21,6 @@ public class RoleDO extends BaseDO {
 
 
     /**
-     * 所属角色
-     */
-    private Long masterId;
-    /**
      * 角色名称
      */
     private String roleName;
@@ -35,5 +31,5 @@ public class RoleDO extends BaseDO {
     /**
      * 角色组集合
      */
-    private String permissionGroupIdList;
+    private String routes;
 }

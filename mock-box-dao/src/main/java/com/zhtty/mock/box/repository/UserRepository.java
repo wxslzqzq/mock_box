@@ -32,9 +32,10 @@ public class UserRepository implements IRepository<Long, UserDO> {
 
     public Optional<UserDO> selectOneByUserNo(String userNo) {
         QueryWrapper<UserDO> queryWrapper = QueryWrapperBuilder.build();
-        if (StrUtil.isNotBlank(userNo)) {
-            queryWrapper.lambda().like(UserDO::getUserNo, userNo);
+        if (StrUtil.isEmpty(userNo)) {
+            return null;
         }
+        queryWrapper.lambda().eq(UserDO::getUserNo, userNo);
         return Optional.ofNullable(userMapper.selectOne(queryWrapper));
     }
 }
