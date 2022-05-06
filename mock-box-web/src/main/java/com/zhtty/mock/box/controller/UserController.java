@@ -25,11 +25,11 @@ public class UserController {
 
     @GetMapping("/get/user/info")
     @ApiOperation(value = "获取当前登录用户信息")
-    public GetUserInfoResponse getUserInfo(@NotNull String token) {
+    public GetUserInfoResponse getUserInfo(@RequestHeader(MockBoxConst.LOGIN_SIGN) String token) {
         return shiroAuthService.getUserInfo(token);
     }
 
-    @PostMapping("/get/user/routes")
+    @GetMapping("/get/user/routes")
     @ApiOperation(value = "获取当前用户许可路由")
     public List<RoutesResponse> getUserRoute(@RequestHeader(MockBoxConst.LOGIN_SIGN) String token) {
         String userNo = JWTUtil.getUserNo(token);

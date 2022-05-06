@@ -12,8 +12,17 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@JsonInclude(value= JsonInclude.Include.NON_NULL)
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class RoutesResponse {
+
+    private Long id;
+    /**
+     * 上级路由ID,若为1级路由则为自己
+     */
+    private Long parentId;
+    /**
+     * 路由
+     */
     private String path;
     /**
      * 组件名称
@@ -28,22 +37,15 @@ public class RoutesResponse {
      */
     private String redirect;
     /**
-     * 默认1:true表示显示根路由
+     * 强制菜单显示为Item而不是SubItem(配合 meta.hidden)
      */
-    private Boolean alwaysShow;
+    private Boolean hideChildrenInMenu;
     /**
-     * 路由名称，非空
+     * 路由名称, 必须设置,且不能重名
      */
     private String name;
     /**
-     * 元数据
+     * 路由元信息（路由附带扩展信息）
      */
     private MetaResponse meta;
-    ;
-    /**
-     * 高亮配置
-     */
-    private String activeMenu;
-
-    private List<RoutesResponse> children;
 }

@@ -39,19 +39,15 @@ public class RouteDO extends BaseDO {
      */
     private String redirect;
     /**
-     * 默认1:true表示显示根路由
+     * 强制菜单显示为Item而不是SubItem(配合 meta.hidden)
      */
-    private Boolean alwaysShow;
+    private Boolean hideChildrenInMenu;
     /**
-     * 路由名称，非空
+     * 路由名称, 必须设置,且不能重名
      */
     private String name;
     /**
-     * 元数据id
+     * 路由元信息（路由附带扩展信息）
      */
-    private Long meta;
-    /**
-     * 高亮配置
-     */
-    private String activeMenu;
+    private String meta;
 }
