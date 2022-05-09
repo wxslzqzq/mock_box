@@ -2,8 +2,7 @@ import cn.hutool.core.collection.CollectionUtil;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.zhtty.mock.box.Application;
 import com.zhtty.mock.box.model.RouteDO;
-import com.zhtty.mock.box.model.out.MetaResponse;
-import com.zhtty.mock.box.model.out.RoutesResponse;
+import com.zhtty.mock.box.model.out.upms.RoutesResponse;
 import com.zhtty.mock.box.repository.RouteRepository;
 import com.zhtty.mock.box.utils.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -11,10 +10,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.StreamUtils;
@@ -27,7 +22,7 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
 @TestPropertySource(value = {"classpath:application.properties"})
-public class RoutesInit {
+public class Init {
     @Autowired
     private RouteRepository routeRepository;
 
@@ -55,6 +50,7 @@ public class RoutesInit {
                 routeRepository.insert(build);
             });
 
+        log.info("succeed");
 
     }
 }

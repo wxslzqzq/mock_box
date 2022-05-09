@@ -1,4 +1,4 @@
-package com.zhtty.mock.box.model.out;
+package com.zhtty.mock.box.model.out.upms;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;

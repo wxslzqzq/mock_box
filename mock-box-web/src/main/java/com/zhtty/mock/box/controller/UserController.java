@@ -1,10 +1,8 @@
 package com.zhtty.mock.box.controller;
 
 import com.zhtty.mock.box.constants.MockBoxConst;
-import com.zhtty.mock.box.model.in.LoginRequest;
-import com.zhtty.mock.box.model.out.GetUserInfoResponse;
-import com.zhtty.mock.box.model.out.LogoutResponse;
-import com.zhtty.mock.box.model.out.RoutesResponse;
+import com.zhtty.mock.box.model.out.upms.GetUserInfoResponse;
+import com.zhtty.mock.box.model.out.upms.RoutesResponse;
 import com.zhtty.mock.box.service.RouteService;
 import com.zhtty.mock.box.service.ShiroAuthService;
 import com.zhtty.mock.box.shiro.JWTUtil;
@@ -12,7 +10,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.constraints.NotNull;
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -25,7 +23,7 @@ public class UserController {
 
     @GetMapping("/get/user/info")
     @ApiOperation(value = "获取当前登录用户信息")
-    public GetUserInfoResponse getUserInfo(@RequestHeader(MockBoxConst.LOGIN_SIGN) String token) {
+    public GetUserInfoResponse getUserInfo(@RequestHeader(MockBoxConst.LOGIN_SIGN) String token) throws IOException {
         return shiroAuthService.getUserInfo(token);
     }
 

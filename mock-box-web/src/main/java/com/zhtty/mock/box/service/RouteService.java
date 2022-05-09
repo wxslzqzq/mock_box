@@ -1,7 +1,7 @@
 package com.zhtty.mock.box.service;
 
 
-import com.zhtty.mock.box.model.out.RoutesResponse;
+import com.zhtty.mock.box.model.out.upms.RoutesResponse;
 
 import java.util.List;
 

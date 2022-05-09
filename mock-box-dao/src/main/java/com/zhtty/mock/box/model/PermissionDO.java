@@ -6,34 +6,30 @@ import lombok.*;
 import com.zhtty.mock.box.model.BaseDO;
 
 /**
- * 用户行为表
+ * 用户权限表
  *
  * @author AutoGenerator
- * @since 2022-04-28
+ * @since 2022-05-09
  */
-@TableName("t_mock_upms_role")
+@TableName("t_mock_upms_permission")
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RoleDO extends BaseDO {
+public class PermissionDO extends BaseDO {
 
 
     /**
-     * 角色名称
+     * 权限中文名称
      */
-    private String roleName;
+    private String permissionName;
     /**
-     * 中文别名
+     * 权限英文名称
      */
-    private String alias;
+    private String permissionId;
     /**
-     * 路由集合
+     * 行为集合
      */
-    private String routes;
-    /**
-     * 权限集合
-     */
-    private String permissions;
+    private String actions;
 }
